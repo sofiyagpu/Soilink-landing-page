@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SoiLink — Умный мониторинг почвы для аграриев</title>
-<meta name="description" content="Комплекс IoT-датчиков и AI-аналитика, предотвращающие истощение земель. Экономим воду и удобрения, управляя полем на основе точных данных.">
+<title data-en="SoiLink — Smart soil monitoring for farmers">SoiLink — Умный мониторинг почвы для аграриев</title>
+<meta name="description" data-en-content="IoT soil sensors and AI analytics that prevent land degradation. Save water and fertilizer with precise field data." content="Комплекс IoT-датчиков и AI-аналитика, предотвращающие истощение земель. Экономим воду и удобрения, управляя полем на основе точных данных.">
 <link rel="canonical" href="https://soilink.land/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://soilink.land/">
@@ -19,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css">
 <link rel="stylesheet" href="css/styles.css">
+<script src="js/i18n.js"></script>
 <!-- Intro guard: an external file (not inline) so the CSP needs no 'unsafe-inline' for scripts -->
 <script src="js/intro.js"></script>
 </head>
@@ -27,29 +28,32 @@
 
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <a class="logo" href="#top" aria-label="SoiLink — на главную">
+    <a class="logo" href="#top" aria-label="SoiLink — на главную" data-en-aria-label="SoiLink — home">
       <span class="logo-mark" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4c-4.2 3-7 7-7 11a7 7 0 0 0 14 0c0-4-2.8-8-7-11Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 17.5 15 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
       </span>
       SoiLink
     </a>
-    <nav class="nav" aria-label="Основная навигация">
-      <a href="#product">О продукте</a>
-      <a href="#architecture">Архитектура</a>
-      <a href="#invest">Инвесторам</a>
+    <nav class="nav" aria-label="Основная навигация" data-en-aria-label="Main navigation">
+      <a href="#product" data-en="Product">О продукте</a>
+      <a href="#architecture" data-en="How it works">Архитектура</a>
+      <a href="#invest" data-en="Investors">Инвесторам</a>
     </nav>
-    <div class="header-cta">
-      <a class="btn btn-primary" href="#contact">Запросить пилот</a>
+    <div class="lang-switch" role="group" aria-label="Язык" data-en-aria-label="Language">
+      <a href="?lang=ru" hreflang="ru">RU</a><a href="?lang=en" hreflang="en">EN</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+    <div class="header-cta">
+      <a class="btn btn-primary" href="#contact" data-en="Request a pilot">Запросить пилот</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" data-en-aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
-    <a href="#product">О продукте</a>
-    <a href="#architecture">Архитектура</a>
-    <a href="#invest">Инвесторам</a>
-    <a class="btn btn-primary" href="#contact">Запросить пилот</a>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация" data-en-aria-label="Mobile navigation">
+    <a href="#product" data-en="Product">О продукте</a>
+    <a href="#architecture" data-en="How it works">Архитектура</a>
+    <a href="#invest" data-en="Investors">Инвесторам</a>
+    <a class="btn btn-primary" href="#contact" data-en="Request a pilot">Запросить пилот</a>
   </nav>
 </header>
 
@@ -62,15 +66,15 @@
     <div class="hero-veil" aria-hidden="true"></div>
 
     <div class="container hero-inner">
-      <a class="hero-pill" href="#invest"><span class="live-dot" aria-hidden="true"></span>Открыт pre-seed раунд</a>
+      <a class="hero-pill" href="#invest"><span class="live-dot" aria-hidden="true"></span><span data-en="Pre-seed round open">Открыт pre-seed раунд</span></a>
       <h1 class="hero-title">
-        <span class="hero-line" data-split>Умный мониторинг почвы</span>
-        <span class="hero-line"><span data-split>для</span> <span class="rotator" data-words="аграриев,агрономов,фермеров"><span class="rotator-word">аграриев</span></span></span>
+        <span class="hero-line" data-split data-en="Smart soil monitoring">Умный мониторинг почвы</span>
+        <span class="hero-line"><span data-split data-en="for">для</span> <span class="rotator" data-words="аграриев,агрономов,фермеров" data-en-data-words="farmers,agronomists,growers"><span class="rotator-word" data-en="farmers">аграриев</span></span></span>
       </h1>
-      <p class="hero-sub">Комплекс IoT-датчиков и AI-аналитика, предотвращающие истощение земель. Экономим воду и удобрения, управляя полем на основе точных данных.</p>
+      <p class="hero-sub" data-en="IoT soil sensors and AI analytics that prevent land degradation. Save water and fertilizer with precise field data.">Комплекс IoT-датчиков и AI-аналитика, предотвращающие истощение земель. Экономим воду и удобрения, управляя полем на основе точных данных.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="#contact" data-magnet>Запросить пилотный запуск</a>
-        <a class="btn btn-outline btn-lg" href="#invest" data-magnet>Стать инвестором</a>
+        <a class="btn btn-primary btn-lg" href="#contact" data-magnet data-en="Request a pilot launch">Запросить пилотный запуск</a>
+        <a class="btn btn-outline btn-lg" href="#invest" data-magnet data-en="Become an investor">Стать инвестором</a>
       </div>
     </div>
 
@@ -79,29 +83,29 @@
       <div class="scenario-frame">
         <div class="frame-bar" aria-hidden="true">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="tab tab-active"><span class="live-dot live-dot-sm"></span>Поле №3, датчик A-12</span>
-          <span class="tab">Карта влажности</span>
-          <span class="tab">Отчёт за неделю</span>
+          <span class="tab tab-active"><span class="live-dot live-dot-sm"></span><span data-en="Field 3, sensor A-12">Поле №3, датчик A-12</span></span>
+          <span class="tab" data-en="Moisture map">Карта влажности</span>
+          <span class="tab" data-en="Weekly report">Отчёт за неделю</span>
         </div>
 
-        <div class="telemetry" aria-label="Живые показания датчика A-12">
+        <div class="telemetry" aria-label="Живые показания датчика A-12" data-en-aria-label="Live readings from sensor A-12">
           <div class="tele-cell">
-            <span class="tele-label">Влажность</span>
+            <span class="tele-label" data-en="Moisture">Влажность</span>
             <span class="tele-value"><span class="tele-num" data-tele="moisture" data-min="21" data-max="27" data-decimals="1">24,3</span><span class="tele-unit">%</span></span>
             <span class="tele-bar"><i style="width:55%"></i></span>
           </div>
           <div class="tele-cell">
-            <span class="tele-label">pH почвы</span>
+            <span class="tele-label" data-en="Soil pH">pH почвы</span>
             <span class="tele-value"><span class="tele-num" data-tele="ph" data-min="6.2" data-max="6.8" data-decimals="2">6,44</span></span>
             <span class="tele-bar"><i style="width:40%"></i></span>
           </div>
           <div class="tele-cell">
-            <span class="tele-label">Температура</span>
+            <span class="tele-label" data-en="Temperature">Температура</span>
             <span class="tele-value"><span class="tele-num" data-tele="temp" data-min="16" data-max="21" data-decimals="1">18,6</span><span class="tele-unit">°C</span></span>
             <span class="tele-bar"><i style="width:52%"></i></span>
           </div>
           <div class="tele-cell tele-chart-cell">
-            <span class="tele-label">Влажность за 24 ч</span>
+            <span class="tele-label" data-en="Moisture, last 24 h">Влажность за 24 ч</span>
             <svg class="tele-chart" viewBox="0 0 240 56" preserveAspectRatio="none" aria-hidden="true">
               <defs>
                 <linearGradient id="teleFill" x1="0" y1="0" x2="0" y2="1">
@@ -118,20 +122,20 @@
         <div class="scenario-cards">
           <article class="scenario-card card-primary">
             <p class="cmd">/irrigation</p>
-            <p class="cmd-text" data-decrypt>«Влажность в корневой зоне ниже 25%. Запустите полив сектора 3 на 40&nbsp;минут до полудня».</p>
-            <p class="cmd-result"><strong>Результат:</strong> ноль перерасхода воды, растения защищены от засухи.</p>
+            <p class="cmd-text" data-decrypt data-en="“Root-zone moisture is below 25%. Irrigate sector 3 for 40&nbsp;minutes before noon.”">«Влажность в корневой зоне ниже 25%. Запустите полив сектора 3 на 40&nbsp;минут до полудня».</p>
+            <p class="cmd-result"><strong data-en="Result:">Результат:</strong> <span data-en="zero water overuse, crops protected from drought.">ноль перерасхода воды, растения защищены от засухи.</span></p>
           </article>
 
           <article class="scenario-card">
             <p class="cmd">/fertilizer</p>
-            <p class="cmd-text" data-decrypt>«Дефицит азота на глубине 30&nbsp;см. Рекомендовано: аммиачная селитра (30-0-0)».</p>
-            <p class="cmd-result"><strong>Результат:</strong> точечное внесение удобрений вместо обработки всего поля вслепую.</p>
+            <p class="cmd-text" data-decrypt data-en="“Nitrogen deficit at 30&nbsp;cm depth. Recommended: ammonium nitrate (30-0-0).”">«Дефицит азота на глубине 30&nbsp;см. Рекомендовано: аммиачная селитра (30-0-0)».</p>
+            <p class="cmd-result"><strong data-en="Result:">Результат:</strong> <span data-en="targeted fertilizer application instead of treating the whole field blind.">точечное внесение удобрений вместо обработки всего поля вслепую.</span></p>
           </article>
 
           <article class="scenario-card">
             <p class="cmd">/alerts</p>
-            <p class="cmd-text" data-decrypt>«Риск засоления и вымывания минералов».</p>
-            <p class="cmd-result"><strong>Результат:</strong> предупреждение деградации почвы за недели до появления внешних признаков.</p>
+            <p class="cmd-text" data-decrypt data-en="“Risk of salinization and mineral leaching.”">«Риск засоления и вымывания минералов».</p>
+            <p class="cmd-result"><strong data-en="Result:">Результат:</strong> <span data-en="soil degradation flagged weeks before any visible signs.">предупреждение деградации почвы за недели до появления внешних признаков.</span></p>
           </article>
         </div>
       </div>
@@ -141,8 +145,8 @@
   <!-- PRODUCT SCREENS -->
   <section id="product" class="section showcase">
     <div class="container">
-      <h2 class="showcase-title" data-reveal-lines>Поле целиком — на одном экране</h2>
-      <p class="section-sub" data-reveal>Тепловая карта влажности, диагностическая лента и план работ. Веб-панель для агронома и мобильное приложение для бригады.</p>
+      <h2 class="showcase-title" data-reveal-lines data-en="The whole field on one screen">Поле целиком — на одном экране</h2>
+      <p class="section-sub" data-reveal data-en="Moisture heat map, diagnostics feed and work plan. A web dashboard for the agronomist and a mobile app for the field crew.">Тепловая карта влажности, диагностическая лента и план работ. Веб-панель для агронома и мобильное приложение для бригады.</p>
 
       <div class="showcase-grid">
         <figure class="shot shot-desktop">
@@ -150,26 +154,26 @@
             <div class="shot-frame shot-frame-browser">
               <div class="shot-bar" aria-hidden="true">
                 <span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span>
-                <span class="shot-url">app.soilink.kz / мониторинг</span>
+                <span class="shot-url" data-en="app.soilink.kz / monitoring">app.soilink.kz / мониторинг</span>
               </div>
-              <img src="assets/screen-dashboard.png" alt="Веб-панель SoiLink: тепловая карта влажности поля, показатели почвы и диагностическая лента" loading="lazy" width="1600" height="886">
+              <img src="assets/screen-dashboard.png" alt="Веб-панель SoiLink: тепловая карта влажности поля, показатели почвы и диагностическая лента" data-en-alt="SoiLink web dashboard: field moisture heat map, soil metrics and diagnostics feed" loading="lazy" width="1600" height="886">
             </div>
           </div>
           <figcaption>
-            <strong>Веб-панель агронома</strong>
-            Хитмап по зонам, NDVI, влажность и кислотность в реальном времени, AI-инсайты с протоколом действий.
-            <span class="map-credit">Карта: <a href="https://www.mapbox.com/about/maps/" rel="noopener" target="_blank">© Mapbox</a> <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">© OpenStreetMap</a> <a href="https://www.maxar.com/" rel="noopener" target="_blank">© Maxar</a></span>
+            <strong data-en="Agronomist dashboard">Веб-панель агронома</strong>
+            <span data-en="Zone heat map, NDVI, real-time moisture and acidity, AI insights with an action protocol.">Хитмап по зонам, NDVI, влажность и кислотность в реальном времени, AI-инсайты с протоколом действий.</span>
+            <span class="map-credit"><span data-en="Map:">Карта:</span> <a href="https://www.mapbox.com/about/maps/" rel="noopener" target="_blank">© Mapbox</a> <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">© OpenStreetMap</a> <a href="https://www.maxar.com/" rel="noopener" target="_blank">© Maxar</a></span>
           </figcaption>
         </figure>
 
         <figure class="shot shot-mobile">
           <div class="shot-frame shot-frame-phone">
             <span class="shot-notch" aria-hidden="true"></span>
-            <img src="assets/screen-app.png" alt="Мобильное приложение SoiLink: календарь задач по зонам поля" loading="lazy" width="750" height="1280">
+            <img src="assets/screen-app.png" alt="Мобильное приложение SoiLink: календарь задач по зонам поля" data-en-alt="SoiLink mobile app: task calendar by field zone" loading="lazy" width="750" height="1280">
           </div>
           <figcaption>
-            <strong>Приложение для бригады</strong>
-            План на день по зонам: что полить, когда и сколько минут — с отметкой о выполнении.
+            <strong data-en="Field crew app">Приложение для бригады</strong>
+            <span data-en="Today’s plan by zone: what to water, when and for how many minutes — checked off when done.">План на день по зонам: что полить, когда и сколько минут — с отметкой о выполнении.</span>
           </figcaption>
         </figure>
       </div>
@@ -178,7 +182,7 @@
 
   <!-- TRUST STRIP -->
   <section class="trust-strip">
-    <p class="trust-label">Нам доверяют и с нами сотрудничают</p>
+    <p class="trust-label" data-en="Trusted by and working with">Нам доверяют и с нами сотрудничают</p>
     <div class="marquee">
       <div class="marquee-track">
         <ul class="marquee-list">
@@ -217,26 +221,26 @@
   <section class="facts">
     <div class="container">
       <p class="statement" data-scroll-reveal>
-        <span class="statement-muted">Лаборатория присылает анализ почвы через 7–20&nbsp;дней.</span>
-        Датчик SoiLink обновляет данные каждые несколько минут.
+        <span class="statement-muted" data-en="A lab returns soil test results in 7–20&nbsp;days.">Лаборатория присылает анализ почвы через 7–20&nbsp;дней.</span>
+        <span data-en="A SoiLink sensor updates its data every few minutes.">Датчик SoiLink обновляет данные каждые несколько минут.</span>
       </p>
 
       <div class="stats-grid">
         <div class="stat">
-          <span class="stat-num"><span class="stat-val" data-count-to="90">90</span><span class="stat-unit">млн га</span></span>
-          <span class="stat-label">почв Казахстана подвержены деградации</span>
+          <span class="stat-num"><span class="stat-val" data-count-to="90">90</span><span class="stat-unit" data-en="M ha">млн га</span></span>
+          <span class="stat-label" data-en="of Kazakhstan’s soils are degrading">почв Казахстана подвержены деградации</span>
         </div>
         <div class="stat">
-          <span class="stat-num"><span class="stat-val" data-count-to="2.4" data-decimals="1" data-prefix="$">$2,4</span><span class="stat-unit">млрд</span></span>
-          <span class="stat-label">теряет отрасль ежегодно из-за управления вслепую</span>
+          <span class="stat-num"><span class="stat-val" data-count-to="2.4" data-decimals="1" data-prefix="$" data-en="$2.4">$2,4</span><span class="stat-unit" data-en="bn">млрд</span></span>
+          <span class="stat-label" data-en="lost by the industry every year to managing blind">теряет отрасль ежегодно из-за управления вслепую</span>
         </div>
         <div class="stat">
           <span class="stat-num"><span class="stat-val" data-count-to="24" data-suffix="/7">24/7</span></span>
-          <span class="stat-label">телеметрия с корневой зоны без ручных замеров</span>
+          <span class="stat-label" data-en="root-zone telemetry, no manual sampling">телеметрия с корневой зоны без ручных замеров</span>
         </div>
         <div class="stat">
-          <span class="stat-num"><span class="stat-val" data-count-to="25">25</span><span class="stat-unit">га</span></span>
-          <span class="stat-label">покрывает один датчик SoiLink</span>
+          <span class="stat-num"><span class="stat-val" data-count-to="25">25</span><span class="stat-unit" data-en="ha">га</span></span>
+          <span class="stat-label" data-en="covered by a single SoiLink sensor">покрывает один датчик SoiLink</span>
         </div>
       </div>
     </div>
@@ -245,8 +249,8 @@
   <!-- ARCHITECTURE: pinned data journey -->
   <section id="architecture" class="section section-alt arch">
     <div class="container">
-      <h2 data-reveal-lines>Как данные идут от поля до экрана</h2>
-      <p class="section-sub" data-reveal>Три уровня системы работают вместе — от датчика в грунте до рекомендации на экране фермера.</p>
+      <h2 data-reveal-lines data-en="How data travels from field to screen">Как данные идут от поля до экрана</h2>
+      <p class="section-sub" data-reveal data-en="Three layers of the system work together — from a sensor in the ground to a recommendation on the farmer’s screen.">Три уровня системы работают вместе — от датчика в грунте до рекомендации на экране фермера.</p>
 
       <div class="arch-flow" id="archFlow">
         <div class="arch-track" aria-hidden="true">
@@ -259,8 +263,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.247 7.761a6 6 0 0 1 0 8.478"/><path d="M19.075 4.933a10 10 0 0 1 0 14.134"/><path d="M4.925 19.067a10 10 0 0 1 0-14.134"/><path d="M7.753 16.239a6 6 0 0 1 0-8.478"/><circle cx="12" cy="12" r="2"/></svg>
             </span>
             <div class="arch-copy">
-              <h3>IoT-датчики</h3>
-              <p>Погружаются в корневую зону, снимают pH, влажность, температуру и состав газов каждые несколько минут.</p>
+              <h3 data-en="IoT sensors">IoT-датчики</h3>
+              <p data-en="Set in the root zone, they measure pH, moisture, temperature and gas composition every few minutes.">Погружаются в корневую зону, снимают pH, влажность, температуру и состав газов каждые несколько минут.</p>
             </div>
           </li>
           <li class="arch-step">
@@ -268,8 +272,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
             </span>
             <div class="arch-copy">
-              <h3>Edge-хаб LinkEdge</h3>
-              <p>Фильтрует и хранит телеметрию локально, работает автономно при слабом или отсутствующем интернете.</p>
+              <h3 data-en="LinkEdge edge hub">Edge-хаб LinkEdge</h3>
+              <p data-en="Filters and stores telemetry on site and keeps working when the internet is weak or down.">Фильтрует и хранит телеметрию локально, работает автономно при слабом или отсутствующем интернете.</p>
             </div>
           </li>
           <li class="arch-step">
@@ -277,8 +281,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M9 13a4.5 4.5 0 0 0 3-4"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M12 13h4"/><path d="M12 18h6a2 2 0 0 1 2 2v1"/><path d="M12 8h8"/><path d="M16 8V5a2 2 0 0 1 2-2"/><circle cx="16" cy="13" r=".5"/><circle cx="18" cy="3" r=".5"/><circle cx="20" cy="21" r=".5"/><circle cx="20" cy="8" r=".5"/></svg>
             </span>
             <div class="arch-copy">
-              <h3>AI-агроном в облаке</h3>
-              <p>Предиктивные модели, откалиброванные под региональные типы почв и климат, формируют рекомендации.</p>
+              <h3 data-en="AI agronomist in the cloud">AI-агроном в облаке</h3>
+              <p data-en="Predictive models calibrated to regional soil types and climate produce the recommendations.">Предиктивные модели, откалиброванные под региональные типы почв и климат, формируют рекомендации.</p>
             </div>
           </li>
           <li class="arch-step">
@@ -286,8 +290,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
             </span>
             <div class="arch-copy">
-              <h3>Приложение фермера</h3>
-              <p>Готовый план полевых работ на сегодня — что, где и сколько — прямо в смартфоне.</p>
+              <h3 data-en="Farmer app">Приложение фермера</h3>
+              <p data-en="Today’s field work plan — what, where and how much — right on the phone.">Готовый план полевых работ на сегодня — что, где и сколько — прямо в смартфоне.</p>
             </div>
           </li>
         </ol>
@@ -299,47 +303,47 @@
   <section id="invest" class="section invest-section">
     <div class="container invest-grid">
       <div class="invest-copy">
-        <h2 data-reveal-lines>Создаём цифровую основу для сельского хозяйства региона.</h2>
-        <p class="invest-text" data-reveal>В Казахстане 90 млн га почв подвержены деградации, а отрасль теряет до $2,4 млрд ежегодно из-за неоптимального управления ресурсами. Мы открываем pre-seed раунд для завершения аппаратной части и проведения первых полевых испытаний.</p>
+        <h2 data-reveal-lines data-en="Building the digital foundation for the region’s agriculture.">Создаём цифровую основу для сельского хозяйства региона.</h2>
+        <p class="invest-text" data-reveal data-en="In Kazakhstan, 90 million hectares of soil are affected by degradation, and the industry loses up to $2.4 billion a year to suboptimal resource management. We are opening a pre-seed round to finish the hardware and run the first field trials.">В Казахстане 90 млн га почв подвержены деградации, а отрасль теряет до $2,4 млрд ежегодно из-за неоптимального управления ресурсами. Мы открываем pre-seed раунд для завершения аппаратной части и проведения первых полевых испытаний.</p>
 
         <ul class="invest-list">
           <li data-reveal>
-            <span class="invest-tag">Инвесторам</span>
-            конвертируемый займ (SAFE) с дисконтом к следующему раунду.
+            <span class="invest-tag" data-en="For investors">Инвесторам</span>
+            <span data-en="a SAFE with a discount to the next round.">конвертируемый займ (SAFE) с дисконтом к следующему раунду.</span>
           </li>
           <li data-reveal>
-            <span class="invest-tag">Агрохолдингам</span>
-            бронь первой серии хабов и датчиков по себестоимости + статус эксклюзивного пилотного партнёра.
+            <span class="invest-tag" data-en="For agribusinesses">Агрохолдингам</span>
+            <span data-en="reserve the first batch of hubs and sensors at cost + exclusive pilot partner status.">бронь первой серии хабов и датчиков по себестоимости + статус эксклюзивного пилотного партнёра.</span>
           </li>
         </ul>
       </div>
 
       <div class="invest-form-wrap" id="contact" data-reveal>
         <form class="invest-form" id="pitchForm" action="https://formspree.io/f/moeqlpwo" method="POST" novalidate>
-          <h3>Получить Pitch Deck и финансовую модель</h3>
+          <h3 data-en="Get the pitch deck and financial model">Получить Pitch Deck и финансовую модель</h3>
 
-          <input type="hidden" name="_subject" value="Новая заявка SoiLink — Pitch Deck">
+          <input type="hidden" name="_subject" value="Новая заявка SoiLink — Pitch Deck" data-en-value="Новая заявка SoiLink — Pitch Deck (EN)">
 
           <label class="field">
-            <span>Ваше имя</span>
+            <span data-en="Your name">Ваше имя</span>
             <input type="text" name="name" autocomplete="name" required>
           </label>
 
           <label class="field">
-            <span>Компания / Фонд / Хозяйство</span>
+            <span data-en="Company / Fund / Farm">Компания / Фонд / Хозяйство</span>
             <input type="text" name="company" autocomplete="organization" required>
           </label>
 
           <label class="field">
-            <span>Email или Telegram</span>
+            <span data-en="Email or Telegram">Email или Telegram</span>
             <input type="text" name="contact" autocomplete="email" required>
           </label>
 
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Получить Pitch Deck и финансовую модель</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block" data-en="Get the pitch deck and financial model">Получить Pitch Deck и финансовую модель</button>
           <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
-          <p class="form-privacy">Форма передаёт имя, компанию и контакт через сервис Formspree. Подробнее — в <a href="/privacy.html">политике обработки персональных данных</a>.</p>
+          <p class="form-privacy"><span data-en="The form sends your name, company and contact via Formspree. See our">Форма передаёт имя, компанию и контакт через сервис Formspree. Подробнее — в</span> <a href="/privacy.html" data-en="privacy policy">политике обработки персональных данных</a>.</p>
         </form>
-        <p class="form-demo-note">Также можем назначить демонстрацию — просто укажите это в заявке.</p>
+        <p class="form-demo-note" data-en="We can also schedule a demo — just mention it in your request.">Также можем назначить демонстрацию — просто укажите это в заявке.</p>
       </div>
     </div>
   </section>
@@ -354,7 +358,7 @@
       </span>
       SoiLink
     </a>
-    <p>© <span id="year"></span> SoiLink. Все права защищены.</p>
+    <p>© <span id="year"></span> SoiLink. <span data-en="All rights reserved.">Все права защищены.</span></p>
   </div>
 </footer>
 

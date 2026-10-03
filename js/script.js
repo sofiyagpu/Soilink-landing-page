@@ -21,6 +21,9 @@ const hasSplit = hasGSAP && typeof window.SplitText !== 'undefined';
 // If the <head> failsafe already revealed the hero, don't hide it again.
 const introStillHidden = root.classList.contains('js-intro');
 const releaseIntro = () => root.classList.remove('js-intro');
+// <html lang> is set by js/i18n.js; t() picks the string for it.
+const isEn = root.lang === 'en';
+const t = (ru, en) => (isEn ? en : ru);
 
 const VANTA_SRC = {
   three: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js',
@@ -40,14 +43,14 @@ const mobileNav = document.getElementById('mobileNav');
 navToggle.addEventListener('click', () => {
   const isOpen = mobileNav.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
-  navToggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  navToggle.setAttribute('aria-label', isOpen ? t('Закрыть меню', 'Close menu') : t('Открыть меню', 'Open menu'));
 });
 
 mobileNav.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     mobileNav.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-label', 'Открыть меню');
+    navToggle.setAttribute('aria-label', t('Открыть меню', 'Open menu'));
   });
 });
 
@@ -65,7 +68,7 @@ pitchForm.addEventListener('submit', async (event) => {
   }
 
   submitBtn.disabled = true;
-  formNote.textContent = 'Отправка…';
+  formNote.textContent = t('Отправка…', 'Sending…');
 
   try {
     const response = await fetch(pitchForm.action, {
@@ -75,13 +78,13 @@ pitchForm.addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
-      formNote.textContent = 'Спасибо! Мы свяжемся с вами в ближайшее время и вышлем Pitch Deck.';
+      formNote.textContent = t('Спасибо! Мы свяжемся с вами в ближайшее время и вышлем Pitch Deck.', 'Thank you! We’ll be in touch shortly and send you the pitch deck.');
       pitchForm.reset();
     } else {
-      formNote.textContent = 'Не удалось отправить заявку. Попробуйте ещё раз или напишите нам напрямую.';
+      formNote.textContent = t('Не удалось отправить заявку. Попробуйте ещё раз или напишите нам напрямую.', 'Couldn’t send your request. Please try again or contact us directly.');
     }
   } catch (err) {
-    formNote.textContent = 'Не удалось отправить заявку — проверьте соединение и попробуйте снова.';
+    formNote.textContent = t('Не удалось отправить заявку — проверьте соединение и попробуйте снова.', 'Couldn’t send your request — check your connection and try again.');
   } finally {
     submitBtn.disabled = false;
   }
@@ -163,7 +166,7 @@ document.querySelectorAll('.shot-frame img').forEach((img) => {
    Live telemetry — Counter (odometer digits) + sparkline
    ========================================================= */
 
-const fmtRu = (n, decimals) => n.toFixed(decimals).replace('.', ',');
+const fmtNum = (n, decimals) => n.toLocaleString(root.lang, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
 
 // Counter: each digit is a 0–9 strip that rolls to its value.
 function createRoller(el) {
@@ -219,7 +222,7 @@ const sensors = Array.from(document.querySelectorAll('[data-tele]')).map((el) =>
 });
 
 const paintSensor = (s) => {
-  s.render(fmtRu(s.value, s.decimals));
+  s.render(fmtNum(s.value, s.decimals));
   if (s.bar) s.bar.style.width = `${((s.value - s.min) / (s.max - s.min)) * 100}%`;
 };
 sensors.forEach(paintSensor);
@@ -433,8 +436,8 @@ function initRotator(box) {
 
 // ---------- DecryptedText: AI commands resolve out of noise ----------
 function initDecrypt(introStartedAt) {
-  const POOL = 'абвгдежзиклмнопрстуфхцчшщэюя0123456789';
-  const KEEP = /[\s«»().,:%\-–—/]/;
+  const POOL = t('абвгдежзиклмнопрстуфхцчшщэюя', 'abcdefghijklmnopqrstuvwxyz') + '0123456789';
+  const KEEP = /[\s«»“”().,:%\-–—/]/;
 
   document.querySelectorAll('[data-decrypt]').forEach((el, i) => {
     const text = el.textContent;
@@ -585,7 +588,7 @@ function initCountUp() {
       duration: 2.2,
       ease: 'expo.out',
       scrollTrigger: { trigger: el, start: 'top bottom', once: true },
-      onUpdate: () => { el.textContent = prefix + fmtRu(counter.v, decimals) + suffix; },
+      onUpdate: () => { el.textContent = prefix + fmtNum(counter.v, decimals) + suffix; },
     });
   });
 }

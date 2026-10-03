@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Политика обработки персональных данных — SoiLink</title>
+<title data-en="Privacy Policy — SoiLink">Политика обработки персональных данных — SoiLink</title>
 <!-- Incomplete: operator, retention, legal basis and rights sections still missing — keep out of search until added -->
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%230A6CFF'/%3E%3Cpath d='M12 4.2c-4.2 3-7 7-7 11a7 7 0 0 0 14 0c0-4-2.8-8-7-11Z' stroke='white' stroke-width='1.8' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M8.5 17.5 15 9' stroke='white' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -11,50 +11,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<script src="js/i18n.js"></script>
 </head>
 <body>
 
 <header class="site-header is-scrolled">
   <div class="container header-inner">
-    <a class="logo" href="/" aria-label="SoiLink — на главную">
+    <a class="logo" href="/" aria-label="SoiLink — на главную" data-en-aria-label="SoiLink — home">
       <span class="logo-mark" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4c-4.2 3-7 7-7 11a7 7 0 0 0 14 0c0-4-2.8-8-7-11Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 17.5 15 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
       </span>
       SoiLink
     </a>
+    <div class="lang-switch" role="group" aria-label="Язык" data-en-aria-label="Language">
+      <a href="?lang=ru" hreflang="ru">RU</a><a href="?lang=en" hreflang="en">EN</a>
+    </div>
   </div>
 </header>
 
 <main class="legal container">
-  <h1>Политика обработки персональных данных</h1>
-  <p class="legal-meta">Сайт: https://soilink.land/</p>
+  <h1 data-en="Privacy Policy">Политика обработки персональных данных</h1>
+  <p class="legal-meta" data-en="Website: https://soilink.land/">Сайт: https://soilink.land/</p>
 
-  <h2>1. Какие данные собирает форма</h2>
-  <p>Форма «Получить Pitch Deck и финансовую модель» на главной странице передаёт только то, что вы в неё вводите:</p>
+  <h2 data-en="1. What data the form collects">1. Какие данные собирает форма</h2>
+  <p data-en="The “Get the pitch deck and financial model” form on the home page sends only what you enter into it:">Форма «Получить Pitch Deck и финансовую модель» на главной странице передаёт только то, что вы в неё вводите:</p>
   <ul>
-    <li>имя (поле «Ваше имя»);</li>
-    <li>название компании, фонда или хозяйства;</li>
-    <li>контакт для связи — адрес электронной почты или Telegram, как вы его укажете.</li>
+    <li data-en="your name (the “Your name” field);">имя (поле «Ваше имя»);</li>
+    <li data-en="the name of your company, fund or farm;">название компании, фонда или хозяйства;</li>
+    <li data-en="a contact — an email address or Telegram handle, as you enter it.">контакт для связи — адрес электронной почты или Telegram, как вы его укажете.</li>
   </ul>
-  <p>Вместе с ними отправляется служебная тема письма «Новая заявка SoiLink — Pitch Deck». Других полей в форме нет. Пожалуйста, не указывайте в форме данные, которые не нужны для связи с вами.</p>
+  <p data-en="Along with them, the form sends a fixed email subject line, “Новая заявка SoiLink — Pitch Deck (EN)”. The form has no other fields. Please don’t enter any data that isn’t needed to contact you.">Вместе с ними отправляется служебная тема письма «Новая заявка SoiLink — Pitch Deck». Других полей в форме нет. Пожалуйста, не указывайте в форме данные, которые не нужны для связи с вами.</p>
 
-  <h2>2. Зачем</h2>
-  <p>Чтобы ответить на заявку: отправить Pitch Deck и финансовую модель, обсудить пилотный запуск или назначить демонстрацию.</p>
+  <h2 data-en="2. Purpose">2. Зачем</h2>
+  <p data-en="To respond to your request: send the pitch deck and financial model, discuss a pilot launch or schedule a demo.">Чтобы ответить на заявку: отправить Pitch Deck и финансовую модель, обсудить пилотный запуск или назначить демонстрацию.</p>
 
-  <h2>3. Кому передаются данные</h2>
-  <p>Форма отправляется из вашего браузера напрямую в сервис <strong>Formspree</strong> (Formspree, Inc.). Formspree принимает заявки и пересылает их по электронной почте получателям, которых определяют владельцы сайта.</p>
-  <p>Согласно <a href="https://formspree.io/legal/privacy-policy" rel="noopener" target="_blank">политике конфиденциальности Formspree</a>, сервис обрабатывает данные в США и в других странах, где работает, и может автоматически собирать IP-адрес, тип браузера, доменные имена, время доступа и адрес страницы, с которой отправлена форма, — для защиты от мошенничества и обеспечения работы сервиса.</p>
+  <h2 data-en="3. Who receives the data">3. Кому передаются данные</h2>
+  <p><span data-en="The form is sent from your browser directly to">Форма отправляется из вашего браузера напрямую в сервис</span> <strong>Formspree</strong> <span data-en="(Formspree, Inc.). Formspree receives submissions and forwards them by email to recipients chosen by the site owners.">(Formspree, Inc.). Formspree принимает заявки и пересылает их по электронной почте получателям, которых определяют владельцы сайта.</span></p>
+  <p><span data-en="According to">Согласно</span> <a href="https://formspree.io/legal/privacy-policy" rel="noopener" target="_blank" data-en="Formspree’s privacy policy">политике конфиденциальности Formspree</a><span data-en=", the service processes data in the United States and other countries where it operates, and may automatically collect your IP address, browser type, domain names, access times and the address of the page the form was sent from — to prevent fraud and keep the service running.">, сервис обрабатывает данные в США и в других странах, где работает, и может автоматически собирать IP-адрес, тип браузера, доменные имена, время доступа и адрес страницы, с которой отправлена форма, — для защиты от мошенничества и обеспечения работы сервиса.</span></p>
 
-  <h2>4. Сторонние ресурсы на страницах сайта</h2>
-  <p>Независимо от формы, при открытии сайта ваш браузер обращается к следующим сервисам, и они получают технические данные запроса (в том числе IP-адрес и сведения о браузере):</p>
+  <h2 data-en="4. Third-party resources on the site">4. Сторонние ресурсы на страницах сайта</h2>
+  <p data-en="Regardless of the form, when you open the site your browser connects to the following services, and they receive the technical details of the request (including your IP address and browser information):">Независимо от формы, при открытии сайта ваш браузер обращается к следующим сервисам, и они получают технические данные запроса (в том числе IP-адрес и сведения о браузере):</p>
   <ul>
-    <li>Vercel — хостинг сайта;</li>
-    <li>Google Fonts (fonts.googleapis.com, fonts.gstatic.com) — шрифты;</li>
-    <li>jsDelivr (cdn.jsdelivr.net) и cdnjs (cdnjs.cloudflare.com) — библиотеки JavaScript.</li>
+    <li data-en="Vercel — site hosting;">Vercel — хостинг сайта;</li>
+    <li data-en="Google Fonts (fonts.googleapis.com, fonts.gstatic.com) — fonts;">Google Fonts (fonts.googleapis.com, fonts.gstatic.com) — шрифты;</li>
+    <li data-en="jsDelivr (cdn.jsdelivr.net) and cdnjs (cdnjs.cloudflare.com) — JavaScript libraries.">jsDelivr (cdn.jsdelivr.net) и cdnjs (cdnjs.cloudflare.com) — библиотеки JavaScript.</li>
   </ul>
-  <p>Сайт не устанавливает собственные cookie и не подключает системы веб-аналитики.</p>
+  <p data-en="The site sets no cookies of its own and uses no web analytics. If you switch the site language, your choice is kept only in your browser (localStorage) and is not sent anywhere.">Сайт не устанавливает собственные cookie и не подключает системы веб-аналитики. Если вы переключаете язык сайта, выбор сохраняется только в вашем браузере (localStorage) и никуда не передаётся.</p>
 
-  <p class="legal-back"><a href="/">← На главную</a></p>
+  <p class="legal-back"><a href="/" data-en="← Back to home">← На главную</a></p>
 </main>
 
 </body>
