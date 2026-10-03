@@ -6,7 +6,7 @@
 //
 // Several effects are vanilla ports of React Bits components
 // (https://github.com/DavidHDev/react-bits): RotatingText, SplitText,
-// ScrollReveal, ScrollVelocity, Counter, CountUp, DecryptedText, Magnet and
+// ScrollReveal, Counter, CountUp, DecryptedText, Magnet and
 // SpotlightCard. React Bits © David Haz — MIT + Commons Clause.
 //
 // Everything degrades: without JS or the CDN scripts the page shows its final
@@ -130,26 +130,6 @@ if (canHover) {
     });
   });
 }
-
-// Partner marquee — with only a few logos one list can be narrower than the
-// screen, which would leave a gap in the loop. Repeat the logos (hidden from
-// screen readers) until each list is at least a viewport wide.
-const fillMarquee = () => {
-  document.querySelectorAll('.marquee-list').forEach((list) => {
-    const originals = Array.from(list.children).filter((li) => !li.dataset.clone);
-    if (!originals.length || !list.offsetWidth) return;
-    for (let i = 0; i < 10 && list.offsetWidth < window.innerWidth; i++) {
-      originals.forEach((li) => {
-        const copy = li.cloneNode(true);
-        copy.dataset.clone = '1';
-        copy.setAttribute('aria-hidden', 'true');
-        list.appendChild(copy);
-      });
-    }
-  });
-};
-fillMarquee();
-window.addEventListener('resize', fillMarquee);
 
 // Screenshot placeholders — until the real product screens are dropped into
 // assets/, show a labelled placeholder instead of a broken-image icon.
@@ -325,7 +305,6 @@ function initMotion() {
   initScrollReveal(document.querySelector('[data-scroll-reveal]'));
   initCountUp();
   initShowcase(mm);
-  initVelocityMarquee();
   ScrollTrigger.sort();
 
   if (document.readyState === 'complete') initVanta();
@@ -608,38 +587,6 @@ function initShowcase(mm) {
       ease: 'none',
       scrollTrigger: { trigger: '.showcase-grid', start: 'top bottom', end: 'bottom top', scrub: 0.6 },
     });
-  });
-}
-
-// ---------- ScrollVelocity: partner marquee reacts to scroll speed ----------
-function initVelocityMarquee() {
-  const track = document.querySelector('.marquee-track');
-  const list = track && track.querySelector('.marquee-list');
-  if (!list) return;
-
-  track.classList.add('is-velocity');
-  let width = list.offsetWidth;
-  window.addEventListener('resize', () => { width = list.offsetWidth; });
-
-  const setX = gsap.quickSetter(track, 'x', 'px');
-  const zone = ScrollTrigger.create({ trigger: '.trust-strip', start: 'top bottom', end: 'bottom top' });
-  const baseSpeed = 42; // px per second
-  let x = -width / 2;
-  let direction = 1;
-  let lastY = window.scrollY;
-  let velocity = 0;
-
-  gsap.ticker.add((time, deltaMs) => {
-    const y = window.scrollY;
-    velocity += ((y - lastY) - velocity) * 0.12; // smoothed px per frame
-    lastY = y;
-    if (!zone.isActive) return;
-
-    if (velocity > 0.2) direction = 1;
-    else if (velocity < -0.2) direction = -1;
-    const boost = Math.min(8, Math.abs(velocity) / 3);
-    x = gsap.utils.wrap(-width, 0, x + direction * baseSpeed * (deltaMs / 1000) * (1 + boost));
-    setX(x);
   });
 }
 
